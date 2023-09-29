@@ -29,13 +29,13 @@ class MainActivity : ComponentActivity() {
         viewModel.getWeatherData("Jamnagar").observe(this) {
             when (it) {
                 is ResultData.Success -> {
+
+                    Log.i("harry", ""+ it.toString())
                     it.data?.let { it1 -> Log.d("TAG", "onCreate: $it1") }
                 }
-
                 is ResultData.Failed -> {
                     Log.d("TAG", "onCreate: failed ${it.message}")
                 }
-
                 is ResultData.Loading -> {
                     Log.d("TAG", "onCreate: Loading")
                 }
