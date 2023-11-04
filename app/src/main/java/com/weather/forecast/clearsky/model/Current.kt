@@ -1,8 +1,5 @@
 package com.weather.forecast.clearsky.model
 
-import com.weather.forecast.clearsky.model.AirQuality
-import com.weather.forecast.clearsky.model.Condition
-
 data class Current(
     val air_quality: AirQuality,
     val cloud: Int,

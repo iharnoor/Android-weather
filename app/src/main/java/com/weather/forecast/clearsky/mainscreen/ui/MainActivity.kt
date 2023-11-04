@@ -25,10 +25,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
-        viewModel.getWeatherData("Jamnagar").observe(this) {
+        viewModel.getWeatherData("Amsterdam").observe(this) {
             when (it) {
                 is ResultData.Success -> {
+                    Log.i("harry", "" + it.toString())
                     it.data?.let { it1 -> Log.d("TAG", "onCreate: $it1") }
                 }
 

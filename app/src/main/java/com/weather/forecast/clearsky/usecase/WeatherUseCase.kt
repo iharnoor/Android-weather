@@ -22,7 +22,6 @@ class WeatherUseCase @Inject constructor(
             } else {
                 ResultData.Success(weatherModel)
             }
-
             emit(resultData)
         }.catch {
             emit(ResultData.Failed())
